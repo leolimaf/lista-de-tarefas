@@ -1,0 +1,8 @@
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+@for (tarefa of tarefas; track tarefa.id) {
+<app-task-item
+  [tarefa]="tarefa"
+  (onDeleteTask)="deleteTask($event)"
+  (onToggleConcluido)="toggleConcluido($event)"
+></app-task-item>
+}
